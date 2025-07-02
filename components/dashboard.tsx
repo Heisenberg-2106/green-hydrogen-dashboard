@@ -50,7 +50,7 @@ export default function Dashboard() {
           <TabsContent value="overview" className="space-y-4">
             <KpiCards />
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              <Card className="col-span-2">
+              <Card className="col-span-full">
                 <CardHeader>
                   <CardTitle>Hydrogen Hub Locations</CardTitle>
                   <CardDescription>Interactive map of India's Green Hydrogen Hubs</CardDescription>
@@ -59,37 +59,7 @@ export default function Dashboard() {
                   <IndiaMap />
                 </CardContent>
               </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Hub Status Overview</CardTitle>
-                  <CardDescription>Current status of hydrogen hubs</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-muted-foreground">Operational</span>
-                        <span className="font-medium">2</span>
-                      </div>
-                      <Progress value={20} className="h-2" />
-                    </div>
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-muted-foreground">Construction</span>
-                        <span className="font-medium">3</span>
-                      </div>
-                      <Progress value={30} className="h-2" />
-                    </div>
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-muted-foreground">Planning</span>
-                        <span className="font-medium">5</span>
-                      </div>
-                      <Progress value={50} className="h-2" />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            
             </div>
             <div className="grid gap-4 md:grid-cols-2">
               <Card>
